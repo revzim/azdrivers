@@ -168,24 +168,3 @@ func InitGenericMongoDoc(m map[string]interface{}) bson.M {
 	}
 	return genMongoDoc
 }
-
-// func parseStreamChanges(ctx context.Context, wg sync.WaitGroup, stream *mongo.ChangeStream) {
-// 	checkMongoInit()
-// 	defer stream.Close(ctx)
-
-// 	defer wg.Done()
-
-// 	for stream.Next(ctx) {
-// 		var data bson.M
-// 		if err := stream.Decode(&data); err != nil {
-// 			log.Fatal(err)
-// 		}
-// 		fmt.Printf("%v\n", data)
-// 	}
-// }
-
-// func checkMongoInit() {
-// 	if mongoMasterClient == nil {
-// 		log.Fatal("mongo client not initialized! need to call `InitMongoClient()` | check out mongo.go file for info")
-// 	}
-// }

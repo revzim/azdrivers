@@ -49,7 +49,7 @@ func (azfb *AZFirebaseApp) init(credentailsPath string) error {
 	azfb.app, err = firebase.NewApp(ctx, nil, opt)
 	if err != nil {
 		// log.Fatal(err)
-		log.Println("AZFirebaseApp init error:", err)
+		log.Println("azdrivers - firebase -init error:", err)
 		return err
 	}
 	return azfb.authorize()
@@ -60,7 +60,7 @@ func (azfb *AZFirebaseApp) authorize() error {
 	ctx := context.Background()
 	azfb.auth, err = azfb.app.Auth(ctx)
 	if err != nil {
-		log.Println("AZFirebaseApp authorize error:", err)
+		log.Println("azdrivers - firebase -authorize error:", err)
 		return err
 	}
 	return nil
