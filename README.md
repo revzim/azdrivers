@@ -2,4 +2,4 @@
 devlopment golang driver helpers
 
 - [mongoDB](https://www.mongodb.com/)
-- [Firebase](https://firebase.google.com/)
+- [Firebase Server Admin SDK](https://firebase.google.com/)
